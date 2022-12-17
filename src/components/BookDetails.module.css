@@ -1,0 +1,59 @@
+.edit,
+.remove {
+  padding: 7.5px 20px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffc108;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.edit:hover {
+  background-color: #c49300;
+}
+
+.remove {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.remove:hover {
+  background-color: #97232e;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: fit-content;
+}
+
+.image {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.details {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topic {
+  max-width: 100%;
+  list-style: none;
+  text-align: justify;
+  line-height: 160%;
+}
