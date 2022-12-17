@@ -1,0 +1,93 @@
+.bookcard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.content {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1rem;
+  color: #000;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+.content p {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.actions {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: fit-content;
+}
+
+.show {
+  cursor: pointer;
+  border: none;
+  padding: 7.5px 25px;
+  background-color: #0c6efd;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.show:hover {
+  background-color: #0040a0;
+}
+
+.edit,
+.remove {
+  padding: 0;
+  border-radius: 5px;
+
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffc108;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.edit:hover {
+  background-color: #c49300;
+}
+
+.remove {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.remove:hover {
+  background-color: #97232e;
+}
