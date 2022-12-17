@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apis = {
-  development: "A URL DO SEU SERVIDOR EXPRESS LOCAL AQUI",
+  development: "http://localhost:1234/api",
   production: "A URL DO SEU SERVIDOR DEPLOYADO NO HEROKU AQUI",
 };
 
@@ -18,9 +18,7 @@ api.interceptors.request.use((config) => {
   const loggedInUser = JSON.parse(storedUser || '""');
 
   if (loggedInUser.token) {
-    config.headers = {
-      Authorization: `Bearer ${loggedInUser.token}`,
-    };
+    config.headers["Authorization"] = `Bearer ${loggedInUser.token}`;
   }
 
   return config;
