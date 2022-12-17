@@ -4,7 +4,7 @@ const AuthContext = createContext({ token: "", user: {} });
 
 function AuthContextComponent(props) {
   const [loggedInUser, setLoggedInUser] = useState({ token: "", user: {} });
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("loggedInUser");
@@ -15,8 +15,8 @@ function AuthContextComponent(props) {
       setLoggedInUser({ ...parsedStoredUser });
     }
   }, []);
-
-  useEffect(() => setLoading(false), [loggedInUser.user]);
+  /* 
+  useEffect(() => setLoading(false), [loggedInUser.user]); */
 
   function handleLogout() {
     window.localStorage.removeItem("loggedInUser");
@@ -25,7 +25,13 @@ function AuthContextComponent(props) {
 
   return (
     <AuthContext.Provider
-      value={{ loggedInUser, setLoggedInUser, loading, handleLogout }}
+      value={{
+        loggedInUser,
+        setLoggedInUser,
+        loading,
+        handleLogout,
+        setLoading,
+      }}
     >
       {props.children}
     </AuthContext.Provider>

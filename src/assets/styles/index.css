@@ -29,7 +29,7 @@ button {
   color: #444;
 }
 
-button[type="submit"] {
+.submit {
   width: 100px;
   height: 36px;
   cursor: pointer;
@@ -45,7 +45,7 @@ button[type="submit"] {
   align-items: center;
 }
 
-button[type="submit"]:hover {
+.submit:hover {
   background-color: #0040a0;
 }
 
@@ -62,4 +62,57 @@ main {
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
+}
+
+.form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  padding: 5px 7.5px;
+  background: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  font-size: 1rem;
+  color: #000;
+
+  margin-bottom: 10px;
+}
+
+.input:focus {
+  border-color: #000;
+}
+
+.input::placeholder {
+  color: gray;
+}
+
+.input__error {
+  border-color: red;
+  color: red;
+}
+
+.label {
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+  width: 100%;
+  margin-top: -5px;
+  margin-bottom: 15px;
 }
