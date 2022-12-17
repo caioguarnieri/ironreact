@@ -1,1 +1,65 @@
-/* Seus estilos globais vão aqui */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  border: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+button[type="submit"] {
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+  border: none;
+  padding: 7.5px 25px;
+  background-color: #0c6efd;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button[type="submit"]:hover {
+  background-color: #0040a0;
+}
+
+main {
+  margin-top: 70px;
+  width: 100%;
+  padding: 30px;
+  flex: 2;
+}
+
+.booklist {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
