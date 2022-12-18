@@ -22,7 +22,7 @@ function Home() {
 
   return (
     <>
-      {books.length !== 0 ? (
+      {books ? (
         <ul className="booklist">
           {books.map((book) => (
             <BookCard
