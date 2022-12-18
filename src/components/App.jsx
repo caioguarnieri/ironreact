@@ -6,18 +6,21 @@ import Login from "../pages/auth/Login";
 import { Header } from "./Header";
 
 import { AuthContextComponent } from "../contexts/authContext";
+import { BooksContextComponent } from "../contexts/booksContext";
 
 function App() {
   return (
     <AuthContextComponent>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </main>
+      <BooksContextComponent>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+      </BooksContextComponent>
     </AuthContextComponent>
   );
 }
