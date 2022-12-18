@@ -1,21 +1,25 @@
 import { Route, Routes } from "react-router-dom";
 
 import Home from "../pages/Home";
+import Book from "../pages/Book";
 import Signup from "../pages/auth/Signup";
 import Login from "../pages/auth/Login";
-import { Header } from "./Header";
+import ProtectedRoute from "../pages/auth/ProtectedRoute";
 
 import { AuthContextComponent } from "../contexts/authContext";
+import { Header } from "./Header";
+import CreateBook from "../pages/book/Create";
+import EditBook from "../pages/book/Edit";
 import { BooksContextComponent } from "../contexts/booksContext";
 
 function App() {
   return (
     <AuthContextComponent>
-      <BooksContextComponent>
-        <Header />
-        <main>
+      <Header />
+      <main>
+        <BooksContextComponent>
           <Routes>
-          <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/book/:id" element={<Book />} />
             <Route
               path="/book/create"
@@ -28,8 +32,8 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>
-        </main>
-      </BooksContextComponent>
+        </BooksContextComponent>
+      </main>
     </AuthContextComponent>
   );
 }
