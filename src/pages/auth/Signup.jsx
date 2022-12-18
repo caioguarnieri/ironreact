@@ -65,7 +65,7 @@ function Signup(props) {
 
     try {
       authContext.setLoading(true);
-      const response = await api.post("/signup", formData);
+      await api.post("/signup", formData);
       setFormErrors({});
       authContext.setLoading(false);
       navigate("/login");

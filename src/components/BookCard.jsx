@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { BinIcon } from "../assets/icons/BinIcon";
 import { EditIcon } from "../assets/icons/EditIcon";
 import { AuthContext } from "../contexts/authContext";
-import { BooksContext } from "../contexts/booksContext";
 
 import styles from "./BookCard.module.css";
 
