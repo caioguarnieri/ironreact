@@ -59,3 +59,23 @@
   margin-top: -5px;
   margin-bottom: 15px;
 }
+
+.btn {
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+  border: none;
+  padding: 7.5px 25px;
+  background-color: #0c6efd;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #0040a0;
+}
